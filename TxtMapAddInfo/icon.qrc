@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>icon/100.bmp</file>
+        <file>icon/104.bmp</file>
+        <file>icon/122.bmp</file>
+        <file>icon/132.bmp</file>
+        <file>icon/230.bmp</file>
+        <file>icon/304.bmp</file>
+        <file>icon/400.bmp</file>
+        <file>icon/402.bmp</file>
+        <file>icon/404.bmp</file>
+        <file>icon/406.bmp</file>
+        <file>icon/506.bmp</file>
+        <file>icon/510.bmp</file>
+        <file>icon/512.bmp</file>
+        <file>icon/514.bmp</file>
+        <file>icon/516.bmp</file>
+        <file>icon/704.bmp</file>
+        <file>icon/706.bmp</file>
+        <file>icon/Folder orange open.png</file>
+    </qresource>
+</RCC>
