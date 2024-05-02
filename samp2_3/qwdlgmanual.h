@@ -15,10 +15,13 @@ private:
     QCheckBox * chkBoxUnder;
     QCheckBox * chkBoxItalic;
     QCheckBox * chkBoxBold;
+
     QRadioButton * rBtnBlack;
     QRadioButton * rBtnRed;
     QRadioButton * rBtnBlue;
+
     QPlainTextEdit * txtEdit;
+
     QPushButton * btnOK;
     QPushButton * btnCancel;
     QPushButton * btnClose;
