@@ -41,8 +41,15 @@
        <string>TxtMap选择</string>
       </property>
       <layout class="QGridLayout" name="gridLayout">
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="lineSrcMapDir"/>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="lineOutputDir"/>
+       </item>
+       <item row="1" column="2">
+        <widget class="QCheckBox" name="chkBoxPop">
+         <property name="text">
+          <string>弹窗</string>
+         </property>
+        </widget>
        </item>
        <item row="1" column="0">
         <widget class="QLabel" name="labelOutput">
@@ -50,6 +57,9 @@
           <string>输出目录</string>
          </property>
         </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lineSrcMapDir"/>
        </item>
        <item row="0" column="0">
         <widget class="QLabel" name="labelSrc">
@@ -98,16 +108,6 @@
          </property>
          <property name="autoRaise">
           <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="lineOutputDir"/>
-       </item>
-       <item row="1" column="2">
-        <widget class="QCheckBox" name="chkBoxPop">
-         <property name="text">
-          <string>弹窗</string>
          </property>
         </widget>
        </item>
@@ -286,6 +286,24 @@
    </layout>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actSelectDir">
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/icon/icon/122.bmp</normaloff>:/icon/icon/122.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>选择目录</string>
+   </property>
+   <property name="toolTip">
+    <string>选择目录</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
  </widget>
  <resources>
   <include location="icon.qrc"/>
