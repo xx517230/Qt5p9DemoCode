@@ -10,11 +10,10 @@ char* cpFlow[7]={"CP","CP1","CP2","CP3","CP4","QTP","QTPQ"};
 #define DEBUG_TIME
 const char* localSavaPath ="D:\\CRAFT_user\\";
 //const char* netSavaPath[2]= { "\\\\PC001\\3360Pdata\\summary\\", "\\\\PC001\\3380Ddata\\summary\\" };
-//const char* netSavaPath[2]= { "\\\\172.16.14.254\\3360Pdata\\summary\\", "\\\\\172.16.14.254\\3380Ddata\\summary\\" };
-std::string netSavaPath[]= { std::string("\\\\172.16.14.254\\3360Pdata\\summary\\"), std::string("\\\\\172.16.14.254\\3380Ddata\\summary\\") };
+const char* netSavaPath[2]= { "\\\\172\.16\.14\.254\\3360Pdata\\summary\\", "\\\\172\.16\.14\.254\\3380Ddata\\summary\\" };
 //不需要修改
 const char* fileType = ".CSV";
-const char* ateArray[2]={"3362","3382"};//3362->3360P 3382->3380D
+const char* ateModel[2]={"3362","3382"};//3362->3360P 3382->3380D
 
 int startUPFlag;
 int activeSite;
@@ -22,13 +21,13 @@ int activeSite;
 std::string ateName;
 char waferId[32];
 char lotId[32];
-char lastWafetId[32]="";
-char lastLotId[32]="";
+char lastWafetId[32];
+char lastLotId[32];
 
 char timeStr[64];
 char command[2048];
-std::string tLogNetSavaPath;
-std::string tLogLocalSavaPath;
+char tLogNetSavaPath[1024];
+char tLogLocalSavaPath[1024];
 char tLogNetFile[1024];
 char tLogLocalFile[1024];
 
@@ -51,9 +50,9 @@ struct TimeInfo{
 //该PLN将时间LOG保存到本地，每片测完后再将本地LOG复制到网络。
 /*
 用法：
-1.按需设置int cp; cp流程选择，见_cpFlow,根据需要选择0-6,默认为0,CP
-2.将timeStart();置于TEST_START()最开始
-3.将timeEnd();置于TEST_END()最后
+1.按需设置int cp; cp流程选择，见_cpFlow,根据需要选择0-6,默认为0,即CP。
+2.将timeStart();置于TEST_START()函数最开始
+3.将timeEnd();置于TEST_END()函数最后
 4.确定copyTimeLog2Net()是否需要复制到主PLN中，并注释掉该PLN的DO_WHEN_EOW()
 
 TEST_START()
@@ -82,7 +81,7 @@ void READ_WAFER_ID( std::string& waferId,std::string& lotId)
 }
 int GET_ACTIVE_SOCKET()
 {
-    return 0xffff;
+    return 0xffffffff;
 }
 void READ_TESTER_MODEL(std::string& ateName)
 {
@@ -114,7 +113,7 @@ void timeEnd()
 
 void copyTimeLog2Net()
 {
-    copyFile2Path(tLogLocalFile,tLogNetSavaPath.c_str());
+    copyFile2Path(tLogLocalFile,tLogNetSavaPath);
 }
 
 void timeStartSub()
@@ -128,14 +127,12 @@ void timeStartSub()
         startUPFlag = 1;
 
         READ_TESTER_MODEL( ateName );
-        if( NULL == ateName.c_str() || "" == ateName || (strcmp(ateName.c_str(),ateArray[0]) == 0))
+        if( NULL == ateName.c_str() || "" == ateName || (strcmp(ateName.c_str(),ateModel[0]) == 0))
         {
-            //strcpy(tLogNetSavaPath,netSavaPath[0]);//3360P net path
-            tLogNetSavaPath=std::string(netSavaPath[0]);
+            strcpy(tLogNetSavaPath,netSavaPath[0]);//3360P net path
         }else
         {
-            //strcpy(tLogNetSavaPath,netSavaPath[1]);//3380D net path
-            tLogNetSavaPath=std::string(netSavaPath[1]);
+            strcpy(tLogNetSavaPath,netSavaPath[1]);//3380D net path
         }
     }
     std::cout<<tLogNetSavaPath<<"\n";
@@ -151,10 +148,10 @@ void timeStartSub()
     {
         std::cout<<tLogLocalSavaPath<<"\n";
         std::cout<<tLogNetSavaPath<<"\n";
-        //sprintf( tLogLocalSavaPath, "%s%s\\%s\\", localSavaPath,cpFlow[cp],lotId);
-        //sprintf( tLogNetSavaPath, "%s%s\\%s\\", tLogNetSavaPath.c,cpFlow[cp],lotId);
-        tLogLocalSavaPath = std::string(localSavaPath)+std::string(cpFlow[cp])+std::string(lotId);
-        tLogNetSavaPath = std::string(tLogNetSavaPath)+std::string(cpFlow[cp])+std::string(lotId);
+        sprintf( tLogLocalSavaPath, "%s%s\\%s\\", localSavaPath,cpFlow[cp],lotId);
+        sprintf( tLogNetSavaPath, "%s%s\\%s\\", tLogNetSavaPath,cpFlow[cp],lotId);
+        // tLogLocalSavaPath = std::string(localSavaPath)+std::string(cpFlow[cp])+std::string(lotId);
+        // tLogNetSavaPath = std::string(tLogNetSavaPath)+std::string(cpFlow[cp])+std::string(lotId);
 
         std::cout<<tLogLocalSavaPath<<"\n";
         std::cout<<tLogNetSavaPath<<"\n";

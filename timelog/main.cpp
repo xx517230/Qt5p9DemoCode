@@ -3,12 +3,12 @@
 
 int main()
 {
-    std::cout<<"abc\n";
-    timeStart();
     for(int i =100;i>=0;i--)
     {
-        //printf("i = %d\n",i);
+        timeStart();
+        printf("i = %d\n",i);
+        timeEnd();
     }
-    timeEnd();
+
     return 0;
 }

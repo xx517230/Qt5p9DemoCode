@@ -11,8 +11,7 @@ void timeStart();
 void timeEnd();
 void copyTimeLog2Net();
 
-void timeStartSub();
-void timeEndSub();
-void copyFile2Path(const char* srcFile,const char* destFilepath);
-
+static void timeStartSub();
+static void timeEndSub();
+static void copyFile2Path(const char* srcFile,const char* destFilepath);
 #endif // TIMELOG_H
