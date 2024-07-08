@@ -23,7 +23,7 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
 #include <QtWidgets/QSpacerItem>
-#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QSplitter>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -33,59 +33,72 @@ class Ui_MainWindow
 public:
     QAction *actionPath;
     QAction *actionExcelPath;
+    QAction *actionLOGPath;
     QWidget *centralwidget;
-    QGridLayout *gridLayout_8;
+    QGridLayout *gridLayout_10;
     QGroupBox *groupBox_10;
-    QVBoxLayout *verticalLayout_2;
-    QGroupBox *groupBox;
-    QGridLayout *gridLayout_2;
-    QLineEdit *editLotId;
+    QGridLayout *gridLayout_8;
+    QSplitter *splitter_2;
+    QGroupBox *groupBox_11;
+    QHBoxLayout *horizontalLayout_3;
+    QCheckBox *chkBoxCSV;
+    QCheckBox *chkBoxWmpTDO;
+    QCheckBox *chkBoxsumryTDO;
+    QCheckBox *chkBoxSTDF;
+    QGroupBox *groupBox_13;
+    QGridLayout *gridLayout_5;
+    QRadioButton *rbtnTsKMap_2;
+    QRadioButton *rbtnTsKMap_3;
+    QSplitter *splitter;
+    QGroupBox *groupBox_2;
+    QGridLayout *gridLayout_4;
+    QCheckBox *chkBoxQTP;
+    QCheckBox *chkBoxCP1;
+    QCheckBox *chkBoxQTP_CP2;
+    QCheckBox *chkBoxCP;
+    QCheckBox *chkBoxCP4;
+    QCheckBox *chkBoxCP3;
+    QCheckBox *chkBoxCP2;
+    QCheckBox *chkBoxQTPQ;
+    QPushButton *btnAllSelect;
+    QPushButton *btnCancelSelect;
+    QPushButton *btnInvertSelect;
+    QGroupBox *groupBox_5;
+    QGridLayout *gridLayout;
+    QPushButton *btnXHQTP;
+    QPushButton *btnZCQTP;
+    QPushButton *btnXHCP;
     QGroupBox *groupBox_6;
     QHBoxLayout *horizontalLayout_2;
     QRadioButton *rbtnMapSave;
     QRadioButton *rbtnTsKMap;
     QRadioButton *rbtnP12Map;
     QRadioButton *rbtnP8Map;
+    QGroupBox *groupBox;
+    QGridLayout *gridLayout_2;
+    QLineEdit *editLotId;
+    QSpacerItem *verticalSpacer_3;
     QSpacerItem *verticalSpacer_4;
-    QGroupBox *groupBox_4;
-    QGridLayout *gridLayout_5;
-    QVBoxLayout *verticalLayout;
-    QGroupBox *groupBox_2;
-    QGridLayout *gridLayout_4;
-    QCheckBox *chkBoxCP;
-    QCheckBox *chkBoxCP1;
-    QCheckBox *chkBoxQTP;
-    QCheckBox *chkBoxCP2;
-    QCheckBox *chkBoxQTPQ;
-    QCheckBox *chkBoxCP3;
-    QCheckBox *chkBoxCP4;
-    QHBoxLayout *horizontalLayout;
-    QPushButton *btnAllSelect;
-    QPushButton *btnInvertSelect;
-    QPushButton *btnCancelSelect;
-    QSpacerItem *verticalSpacer_5;
-    QGroupBox *groupBox_5;
-    QGridLayout *gridLayout;
-    QPushButton *btnXHQTP;
-    QPushButton *btnZCQTP;
-    QPushButton *btnXHCP;
     QGroupBox *groupBox_9;
-    QGridLayout *gridLayout_6;
+    QGridLayout *gridLayout_9;
     QGroupBox *groupBox_3;
     QGridLayout *gridLayout_7;
     QLineEdit *editOutPutPath;
-    QPushButton *pbtnSelectPath;
     QGroupBox *groupBox_8;
     QGridLayout *gridLayout_3;
     QCheckBox *chkOperPath;
     QCheckBox *chkOperCheckedPath;
     QCheckBox *chkOperUncheckedPath;
-    QSpacerItem *verticalSpacer;
-    QGroupBox *groupBox_7;
-    QHBoxLayout *horizontalLayout_3;
-    QPushButton *btnMapDo;
-    QPushButton *btnExcleDo;
     QSpacerItem *verticalSpacer_2;
+    QGroupBox *groupBox_7;
+    QGridLayout *gridLayout_6;
+    QPushButton *btnMapDo;
+    QPushButton *btnLogDo;
+    QPushButton *btnAllDo;
+    QPushButton *btnMapExcleDo;
+    QPushButton *btnExcleDo;
+    QPushButton *btnMapLogDo;
+    QSpacerItem *verticalSpacer;
     QMenuBar *menubar;
     QMenu *menu;
 
@@ -93,87 +106,105 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(741, 421);
+        MainWindow->resize(736, 486);
         actionPath = new QAction(MainWindow);
         actionPath->setObjectName(QString::fromUtf8("actionPath"));
         actionExcelPath = new QAction(MainWindow);
         actionExcelPath->setObjectName(QString::fromUtf8("actionExcelPath"));
+        actionLOGPath = new QAction(MainWindow);
+        actionLOGPath->setObjectName(QString::fromUtf8("actionLOGPath"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        gridLayout_8 = new QGridLayout(centralwidget);
-        gridLayout_8->setObjectName(QString::fromUtf8("gridLayout_8"));
+        gridLayout_10 = new QGridLayout(centralwidget);
+        gridLayout_10->setObjectName(QString::fromUtf8("gridLayout_10"));
         groupBox_10 = new QGroupBox(centralwidget);
         groupBox_10->setObjectName(QString::fromUtf8("groupBox_10"));
-        verticalLayout_2 = new QVBoxLayout(groupBox_10);
-        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        groupBox = new QGroupBox(groupBox_10);
-        groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        gridLayout_2 = new QGridLayout(groupBox);
-        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
-        editLotId = new QLineEdit(groupBox);
-        editLotId->setObjectName(QString::fromUtf8("editLotId"));
+        gridLayout_8 = new QGridLayout(groupBox_10);
+        gridLayout_8->setObjectName(QString::fromUtf8("gridLayout_8"));
+        splitter_2 = new QSplitter(groupBox_10);
+        splitter_2->setObjectName(QString::fromUtf8("splitter_2"));
+        splitter_2->setOrientation(Qt::Horizontal);
+        groupBox_11 = new QGroupBox(splitter_2);
+        groupBox_11->setObjectName(QString::fromUtf8("groupBox_11"));
+        horizontalLayout_3 = new QHBoxLayout(groupBox_11);
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        chkBoxCSV = new QCheckBox(groupBox_11);
+        chkBoxCSV->setObjectName(QString::fromUtf8("chkBoxCSV"));
+        chkBoxCSV->setChecked(true);
 
-        gridLayout_2->addWidget(editLotId, 0, 0, 1, 1);
+        horizontalLayout_3->addWidget(chkBoxCSV);
 
+        chkBoxWmpTDO = new QCheckBox(groupBox_11);
+        chkBoxWmpTDO->setObjectName(QString::fromUtf8("chkBoxWmpTDO"));
 
-        verticalLayout_2->addWidget(groupBox);
+        horizontalLayout_3->addWidget(chkBoxWmpTDO);
 
-        groupBox_6 = new QGroupBox(groupBox_10);
-        groupBox_6->setObjectName(QString::fromUtf8("groupBox_6"));
-        horizontalLayout_2 = new QHBoxLayout(groupBox_6);
-        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        rbtnMapSave = new QRadioButton(groupBox_6);
-        rbtnMapSave->setObjectName(QString::fromUtf8("rbtnMapSave"));
-        rbtnMapSave->setChecked(true);
+        chkBoxsumryTDO = new QCheckBox(groupBox_11);
+        chkBoxsumryTDO->setObjectName(QString::fromUtf8("chkBoxsumryTDO"));
 
-        horizontalLayout_2->addWidget(rbtnMapSave);
+        horizontalLayout_3->addWidget(chkBoxsumryTDO);
 
-        rbtnTsKMap = new QRadioButton(groupBox_6);
-        rbtnTsKMap->setObjectName(QString::fromUtf8("rbtnTsKMap"));
+        chkBoxSTDF = new QCheckBox(groupBox_11);
+        chkBoxSTDF->setObjectName(QString::fromUtf8("chkBoxSTDF"));
 
-        horizontalLayout_2->addWidget(rbtnTsKMap);
+        horizontalLayout_3->addWidget(chkBoxSTDF);
 
-        rbtnP12Map = new QRadioButton(groupBox_6);
-        rbtnP12Map->setObjectName(QString::fromUtf8("rbtnP12Map"));
-
-        horizontalLayout_2->addWidget(rbtnP12Map);
-
-        rbtnP8Map = new QRadioButton(groupBox_6);
-        rbtnP8Map->setObjectName(QString::fromUtf8("rbtnP8Map"));
-
-        horizontalLayout_2->addWidget(rbtnP8Map);
-
-
-        verticalLayout_2->addWidget(groupBox_6);
-
-        verticalSpacer_4 = new QSpacerItem(20, 0, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout_2->addItem(verticalSpacer_4);
-
-        groupBox_4 = new QGroupBox(groupBox_10);
-        groupBox_4->setObjectName(QString::fromUtf8("groupBox_4"));
-        gridLayout_5 = new QGridLayout(groupBox_4);
+        splitter_2->addWidget(groupBox_11);
+        groupBox_13 = new QGroupBox(splitter_2);
+        groupBox_13->setObjectName(QString::fromUtf8("groupBox_13"));
+        gridLayout_5 = new QGridLayout(groupBox_13);
         gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
-        verticalLayout = new QVBoxLayout();
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        groupBox_2 = new QGroupBox(groupBox_4);
+        rbtnTsKMap_2 = new QRadioButton(groupBox_13);
+        rbtnTsKMap_2->setObjectName(QString::fromUtf8("rbtnTsKMap_2"));
+        rbtnTsKMap_2->setChecked(true);
+
+        gridLayout_5->addWidget(rbtnTsKMap_2, 0, 0, 1, 1);
+
+        rbtnTsKMap_3 = new QRadioButton(groupBox_13);
+        rbtnTsKMap_3->setObjectName(QString::fromUtf8("rbtnTsKMap_3"));
+
+        gridLayout_5->addWidget(rbtnTsKMap_3, 1, 0, 1, 1);
+
+        splitter_2->addWidget(groupBox_13);
+
+        gridLayout_8->addWidget(splitter_2, 4, 0, 1, 1);
+
+        splitter = new QSplitter(groupBox_10);
+        splitter->setObjectName(QString::fromUtf8("splitter"));
+        splitter->setOrientation(Qt::Horizontal);
+        groupBox_2 = new QGroupBox(splitter);
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
         gridLayout_4 = new QGridLayout(groupBox_2);
         gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
-        chkBoxCP = new QCheckBox(groupBox_2);
-        chkBoxCP->setObjectName(QString::fromUtf8("chkBoxCP"));
+        chkBoxQTP = new QCheckBox(groupBox_2);
+        chkBoxQTP->setObjectName(QString::fromUtf8("chkBoxQTP"));
 
-        gridLayout_4->addWidget(chkBoxCP, 0, 0, 1, 1);
+        gridLayout_4->addWidget(chkBoxQTP, 0, 2, 1, 1);
 
         chkBoxCP1 = new QCheckBox(groupBox_2);
         chkBoxCP1->setObjectName(QString::fromUtf8("chkBoxCP1"));
 
         gridLayout_4->addWidget(chkBoxCP1, 0, 1, 1, 1);
 
-        chkBoxQTP = new QCheckBox(groupBox_2);
-        chkBoxQTP->setObjectName(QString::fromUtf8("chkBoxQTP"));
+        chkBoxQTP_CP2 = new QCheckBox(groupBox_2);
+        chkBoxQTP_CP2->setObjectName(QString::fromUtf8("chkBoxQTP_CP2"));
 
-        gridLayout_4->addWidget(chkBoxQTP, 0, 2, 1, 1);
+        gridLayout_4->addWidget(chkBoxQTP_CP2, 2, 2, 1, 1);
+
+        chkBoxCP = new QCheckBox(groupBox_2);
+        chkBoxCP->setObjectName(QString::fromUtf8("chkBoxCP"));
+
+        gridLayout_4->addWidget(chkBoxCP, 0, 0, 1, 1);
+
+        chkBoxCP4 = new QCheckBox(groupBox_2);
+        chkBoxCP4->setObjectName(QString::fromUtf8("chkBoxCP4"));
+
+        gridLayout_4->addWidget(chkBoxCP4, 3, 1, 1, 1);
+
+        chkBoxCP3 = new QCheckBox(groupBox_2);
+        chkBoxCP3->setObjectName(QString::fromUtf8("chkBoxCP3"));
+
+        gridLayout_4->addWidget(chkBoxCP3, 2, 1, 1, 1);
 
         chkBoxCP2 = new QCheckBox(groupBox_2);
         chkBoxCP2->setObjectName(QString::fromUtf8("chkBoxCP2"));
@@ -185,47 +216,23 @@ public:
 
         gridLayout_4->addWidget(chkBoxQTPQ, 1, 2, 1, 1);
 
-        chkBoxCP3 = new QCheckBox(groupBox_2);
-        chkBoxCP3->setObjectName(QString::fromUtf8("chkBoxCP3"));
-
-        gridLayout_4->addWidget(chkBoxCP3, 2, 1, 1, 1);
-
-        chkBoxCP4 = new QCheckBox(groupBox_2);
-        chkBoxCP4->setObjectName(QString::fromUtf8("chkBoxCP4"));
-
-        gridLayout_4->addWidget(chkBoxCP4, 3, 1, 1, 1);
-
-
-        verticalLayout->addWidget(groupBox_2);
-
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        btnAllSelect = new QPushButton(groupBox_4);
+        btnAllSelect = new QPushButton(groupBox_2);
         btnAllSelect->setObjectName(QString::fromUtf8("btnAllSelect"));
 
-        horizontalLayout->addWidget(btnAllSelect);
+        gridLayout_4->addWidget(btnAllSelect, 4, 0, 1, 1);
 
-        btnInvertSelect = new QPushButton(groupBox_4);
-        btnInvertSelect->setObjectName(QString::fromUtf8("btnInvertSelect"));
-
-        horizontalLayout->addWidget(btnInvertSelect);
-
-        btnCancelSelect = new QPushButton(groupBox_4);
+        btnCancelSelect = new QPushButton(groupBox_2);
         btnCancelSelect->setObjectName(QString::fromUtf8("btnCancelSelect"));
 
-        horizontalLayout->addWidget(btnCancelSelect);
+        gridLayout_4->addWidget(btnCancelSelect, 4, 2, 1, 1);
 
+        btnInvertSelect = new QPushButton(groupBox_2);
+        btnInvertSelect->setObjectName(QString::fromUtf8("btnInvertSelect"));
 
-        verticalLayout->addLayout(horizontalLayout);
+        gridLayout_4->addWidget(btnInvertSelect, 4, 1, 1, 1);
 
-
-        gridLayout_5->addLayout(verticalLayout, 0, 0, 1, 1);
-
-        verticalSpacer_5 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        gridLayout_5->addItem(verticalSpacer_5, 1, 0, 1, 1);
-
-        groupBox_5 = new QGroupBox(groupBox_4);
+        splitter->addWidget(groupBox_2);
+        groupBox_5 = new QGroupBox(splitter);
         groupBox_5->setObjectName(QString::fromUtf8("groupBox_5"));
         gridLayout = new QGridLayout(groupBox_5);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
@@ -249,19 +256,66 @@ public:
 
         gridLayout->addWidget(btnXHCP, 0, 0, 1, 1);
 
+        splitter->addWidget(groupBox_5);
 
-        gridLayout_5->addWidget(groupBox_5, 0, 1, 1, 1);
+        gridLayout_8->addWidget(splitter, 3, 0, 1, 1);
+
+        groupBox_6 = new QGroupBox(groupBox_10);
+        groupBox_6->setObjectName(QString::fromUtf8("groupBox_6"));
+        horizontalLayout_2 = new QHBoxLayout(groupBox_6);
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        rbtnMapSave = new QRadioButton(groupBox_6);
+        rbtnMapSave->setObjectName(QString::fromUtf8("rbtnMapSave"));
+        rbtnMapSave->setChecked(false);
+
+        horizontalLayout_2->addWidget(rbtnMapSave);
+
+        rbtnTsKMap = new QRadioButton(groupBox_6);
+        rbtnTsKMap->setObjectName(QString::fromUtf8("rbtnTsKMap"));
+        rbtnTsKMap->setChecked(true);
+
+        horizontalLayout_2->addWidget(rbtnTsKMap);
+
+        rbtnP12Map = new QRadioButton(groupBox_6);
+        rbtnP12Map->setObjectName(QString::fromUtf8("rbtnP12Map"));
+
+        horizontalLayout_2->addWidget(rbtnP12Map);
+
+        rbtnP8Map = new QRadioButton(groupBox_6);
+        rbtnP8Map->setObjectName(QString::fromUtf8("rbtnP8Map"));
+
+        horizontalLayout_2->addWidget(rbtnP8Map);
 
 
-        verticalLayout_2->addWidget(groupBox_4);
+        gridLayout_8->addWidget(groupBox_6, 1, 0, 1, 1);
+
+        groupBox = new QGroupBox(groupBox_10);
+        groupBox->setObjectName(QString::fromUtf8("groupBox"));
+        gridLayout_2 = new QGridLayout(groupBox);
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        editLotId = new QLineEdit(groupBox);
+        editLotId->setObjectName(QString::fromUtf8("editLotId"));
+
+        gridLayout_2->addWidget(editLotId, 0, 0, 1, 1);
 
 
-        gridLayout_8->addWidget(groupBox_10, 0, 0, 1, 1);
+        gridLayout_8->addWidget(groupBox, 0, 0, 1, 1);
+
+        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        gridLayout_8->addItem(verticalSpacer_3, 2, 0, 1, 1);
+
+        verticalSpacer_4 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        gridLayout_8->addItem(verticalSpacer_4, 5, 0, 1, 1);
+
+
+        gridLayout_10->addWidget(groupBox_10, 0, 0, 1, 1);
 
         groupBox_9 = new QGroupBox(centralwidget);
         groupBox_9->setObjectName(QString::fromUtf8("groupBox_9"));
-        gridLayout_6 = new QGridLayout(groupBox_9);
-        gridLayout_6->setObjectName(QString::fromUtf8("gridLayout_6"));
+        gridLayout_9 = new QGridLayout(groupBox_9);
+        gridLayout_9->setObjectName(QString::fromUtf8("gridLayout_9"));
         groupBox_3 = new QGroupBox(groupBox_9);
         groupBox_3->setObjectName(QString::fromUtf8("groupBox_3"));
         gridLayout_7 = new QGridLayout(groupBox_3);
@@ -271,13 +325,8 @@ public:
 
         gridLayout_7->addWidget(editOutPutPath, 0, 0, 1, 1);
 
-        pbtnSelectPath = new QPushButton(groupBox_3);
-        pbtnSelectPath->setObjectName(QString::fromUtf8("pbtnSelectPath"));
 
-        gridLayout_7->addWidget(pbtnSelectPath, 0, 1, 1, 1);
-
-
-        gridLayout_6->addWidget(groupBox_3, 0, 0, 1, 1);
+        gridLayout_9->addWidget(groupBox_3, 0, 0, 1, 1);
 
         groupBox_8 = new QGroupBox(groupBox_9);
         groupBox_8->setObjectName(QString::fromUtf8("groupBox_8"));
@@ -300,47 +349,68 @@ public:
         gridLayout_3->addWidget(chkOperUncheckedPath, 0, 1, 1, 1);
 
 
-        gridLayout_6->addWidget(groupBox_8, 1, 0, 1, 1);
+        gridLayout_9->addWidget(groupBox_8, 1, 0, 1, 1);
 
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        verticalSpacer_2 = new QSpacerItem(20, 63, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        gridLayout_6->addItem(verticalSpacer, 2, 0, 1, 1);
+        gridLayout_9->addItem(verticalSpacer_2, 2, 0, 1, 1);
 
         groupBox_7 = new QGroupBox(groupBox_9);
         groupBox_7->setObjectName(QString::fromUtf8("groupBox_7"));
-        horizontalLayout_3 = new QHBoxLayout(groupBox_7);
-        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        gridLayout_6 = new QGridLayout(groupBox_7);
+        gridLayout_6->setObjectName(QString::fromUtf8("gridLayout_6"));
         btnMapDo = new QPushButton(groupBox_7);
         btnMapDo->setObjectName(QString::fromUtf8("btnMapDo"));
 
-        horizontalLayout_3->addWidget(btnMapDo);
+        gridLayout_6->addWidget(btnMapDo, 0, 0, 1, 1);
+
+        btnLogDo = new QPushButton(groupBox_7);
+        btnLogDo->setObjectName(QString::fromUtf8("btnLogDo"));
+
+        gridLayout_6->addWidget(btnLogDo, 0, 2, 1, 1);
+
+        btnAllDo = new QPushButton(groupBox_7);
+        btnAllDo->setObjectName(QString::fromUtf8("btnAllDo"));
+
+        gridLayout_6->addWidget(btnAllDo, 3, 0, 1, 3);
+
+        btnMapExcleDo = new QPushButton(groupBox_7);
+        btnMapExcleDo->setObjectName(QString::fromUtf8("btnMapExcleDo"));
+
+        gridLayout_6->addWidget(btnMapExcleDo, 1, 0, 1, 3);
 
         btnExcleDo = new QPushButton(groupBox_7);
         btnExcleDo->setObjectName(QString::fromUtf8("btnExcleDo"));
 
-        horizontalLayout_3->addWidget(btnExcleDo);
+        gridLayout_6->addWidget(btnExcleDo, 0, 1, 1, 1);
+
+        btnMapLogDo = new QPushButton(groupBox_7);
+        btnMapLogDo->setObjectName(QString::fromUtf8("btnMapLogDo"));
+
+        gridLayout_6->addWidget(btnMapLogDo, 2, 0, 1, 3);
 
 
-        gridLayout_6->addWidget(groupBox_7, 3, 0, 1, 1);
+        gridLayout_9->addWidget(groupBox_7, 3, 0, 1, 1);
 
-        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        verticalSpacer = new QSpacerItem(20, 63, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        gridLayout_6->addItem(verticalSpacer_2, 4, 0, 1, 1);
+        gridLayout_9->addItem(verticalSpacer, 4, 0, 1, 1);
 
 
-        gridLayout_8->addWidget(groupBox_9, 0, 1, 1, 1);
+        gridLayout_10->addWidget(groupBox_9, 0, 1, 1, 1);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 741, 20));
+        menubar->setGeometry(QRect(0, 0, 736, 20));
         menu = new QMenu(menubar);
         menu->setObjectName(QString::fromUtf8("menu"));
         MainWindow->setMenuBar(menubar);
 
         menubar->addAction(menu->menuAction());
-        menu->addAction(actionPath);
         menu->addAction(actionExcelPath);
+        menu->addAction(actionPath);
+        menu->addAction(actionLOGPath);
 
         retranslateUi(MainWindow);
 
@@ -349,43 +419,58 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "CopyFromNet", nullptr));
         actionPath->setText(QCoreApplication::translate("MainWindow", "MAP\350\267\257\345\276\204", nullptr));
         actionExcelPath->setText(QCoreApplication::translate("MainWindow", "\346\265\213\346\212\245\350\267\257\345\276\204", nullptr));
+        actionLOGPath->setText(QCoreApplication::translate("MainWindow", "LOG\350\267\257\345\276\204", nullptr));
+#if QT_CONFIG(tooltip)
+        actionLOGPath->setToolTip(QCoreApplication::translate("MainWindow", "LOG\350\267\257\345\276\204", nullptr));
+#endif // QT_CONFIG(tooltip)
         groupBox_10->setTitle(QString());
-        groupBox->setTitle(QCoreApplication::translate("MainWindow", "\346\211\271\345\217\267", nullptr));
-        editLotId->setText(QString());
+        groupBox_11->setTitle(QCoreApplication::translate("MainWindow", "LOG\351\200\211\346\213\251", nullptr));
+        chkBoxCSV->setText(QCoreApplication::translate("MainWindow", "CSV", nullptr));
+        chkBoxWmpTDO->setText(QCoreApplication::translate("MainWindow", "wmp", nullptr));
+        chkBoxsumryTDO->setText(QCoreApplication::translate("MainWindow", "sumry", nullptr));
+        chkBoxSTDF->setText(QCoreApplication::translate("MainWindow", "STDF", nullptr));
+        groupBox_13->setTitle(QCoreApplication::translate("MainWindow", "\346\234\272\345\236\213\351\200\211\346\213\251", nullptr));
+        rbtnTsKMap_2->setText(QCoreApplication::translate("MainWindow", "3360P", nullptr));
+        rbtnTsKMap_3->setText(QCoreApplication::translate("MainWindow", "3380D", nullptr));
+        groupBox_2->setTitle(QCoreApplication::translate("MainWindow", "MAP\344\277\235\345\255\230/LOG\346\265\201\347\250\213\351\200\211\346\213\251", nullptr));
+        chkBoxQTP->setText(QCoreApplication::translate("MainWindow", "QTP", nullptr));
+        chkBoxCP1->setText(QCoreApplication::translate("MainWindow", "CP1", nullptr));
+        chkBoxQTP_CP2->setText(QCoreApplication::translate("MainWindow", "QTP_CP2", nullptr));
+        chkBoxCP->setText(QCoreApplication::translate("MainWindow", "CP", nullptr));
+        chkBoxCP4->setText(QCoreApplication::translate("MainWindow", "CP4", nullptr));
+        chkBoxCP3->setText(QCoreApplication::translate("MainWindow", "CP3", nullptr));
+        chkBoxCP2->setText(QCoreApplication::translate("MainWindow", "CP2", nullptr));
+        chkBoxQTPQ->setText(QCoreApplication::translate("MainWindow", "QTPQ", nullptr));
+        btnAllSelect->setText(QCoreApplication::translate("MainWindow", "\345\205\250\351\200\211", nullptr));
+        btnCancelSelect->setText(QCoreApplication::translate("MainWindow", "\347\251\272\351\200\211", nullptr));
+        btnInvertSelect->setText(QCoreApplication::translate("MainWindow", "\345\217\215\351\200\211", nullptr));
+        groupBox_5->setTitle(QCoreApplication::translate("MainWindow", "\345\270\270\347\224\250\346\265\201\347\250\213", nullptr));
+        btnXHQTP->setText(QCoreApplication::translate("MainWindow", "XH-QTP", nullptr));
+        btnZCQTP->setText(QCoreApplication::translate("MainWindow", "ZC-QTP", nullptr));
+        btnXHCP->setText(QCoreApplication::translate("MainWindow", "XH-CP", nullptr));
         groupBox_6->setTitle(QCoreApplication::translate("MainWindow", "map\350\267\257\345\276\204\351\200\211\346\213\251", nullptr));
         rbtnMapSave->setText(QCoreApplication::translate("MainWindow", "MAP\344\277\235\345\255\230", nullptr));
         rbtnTsKMap->setText(QCoreApplication::translate("MainWindow", "TSK-MAP", nullptr));
         rbtnP12Map->setText(QCoreApplication::translate("MainWindow", "P12-MAP", nullptr));
         rbtnP8Map->setText(QCoreApplication::translate("MainWindow", "P8-MAP", nullptr));
-        groupBox_4->setTitle(QString());
-        groupBox_2->setTitle(QCoreApplication::translate("MainWindow", "MAP\344\277\235\345\255\230\346\265\201\347\250\213\351\200\211\346\213\251", nullptr));
-        chkBoxCP->setText(QCoreApplication::translate("MainWindow", "CP", nullptr));
-        chkBoxCP1->setText(QCoreApplication::translate("MainWindow", "CP1", nullptr));
-        chkBoxQTP->setText(QCoreApplication::translate("MainWindow", "QTP", nullptr));
-        chkBoxCP2->setText(QCoreApplication::translate("MainWindow", "CP2", nullptr));
-        chkBoxQTPQ->setText(QCoreApplication::translate("MainWindow", "QTPQ", nullptr));
-        chkBoxCP3->setText(QCoreApplication::translate("MainWindow", "CP3", nullptr));
-        chkBoxCP4->setText(QCoreApplication::translate("MainWindow", "CP4", nullptr));
-        btnAllSelect->setText(QCoreApplication::translate("MainWindow", "\345\205\250\351\200\211", nullptr));
-        btnInvertSelect->setText(QCoreApplication::translate("MainWindow", "\345\217\215\351\200\211", nullptr));
-        btnCancelSelect->setText(QCoreApplication::translate("MainWindow", "\347\251\272\351\200\211", nullptr));
-        groupBox_5->setTitle(QString());
-        btnXHQTP->setText(QCoreApplication::translate("MainWindow", "XH-QTP", nullptr));
-        btnZCQTP->setText(QCoreApplication::translate("MainWindow", "ZC-QTP", nullptr));
-        btnXHCP->setText(QCoreApplication::translate("MainWindow", "XH-CP", nullptr));
+        groupBox->setTitle(QCoreApplication::translate("MainWindow", "\346\211\271\345\217\267", nullptr));
+        editLotId->setText(QString());
         groupBox_9->setTitle(QString());
-        groupBox_3->setTitle(QCoreApplication::translate("MainWindow", "\347\233\256\346\240\207\350\267\257\345\276\204", nullptr));
-        pbtnSelectPath->setText(QCoreApplication::translate("MainWindow", "\351\200\211\346\213\251", nullptr));
+        groupBox_3->setTitle(QCoreApplication::translate("MainWindow", "\350\276\223\345\207\272\350\267\257\345\276\204", nullptr));
         groupBox_8->setTitle(QCoreApplication::translate("MainWindow", "\346\265\213\346\212\245\350\267\257\345\276\204\351\200\211\346\213\251", nullptr));
         chkOperPath->setText(QCoreApplication::translate("MainWindow", "\347\224\237\344\272\247\347\216\260\345\234\272", nullptr));
         chkOperCheckedPath->setText(QCoreApplication::translate("MainWindow", "\345\267\262\346\240\270\345\257\271\346\225\260\346\215\256", nullptr));
         chkOperUncheckedPath->setText(QCoreApplication::translate("MainWindow", "\346\234\252\346\240\270\345\257\271\346\225\260\346\215\256", nullptr));
         groupBox_7->setTitle(QString());
         btnMapDo->setText(QCoreApplication::translate("MainWindow", "\346\211\247\350\241\214MAP\345\244\215\345\210\266", nullptr));
+        btnLogDo->setText(QCoreApplication::translate("MainWindow", "\346\211\247\350\241\214LOG\345\244\215\345\210\266", nullptr));
+        btnAllDo->setText(QCoreApplication::translate("MainWindow", "\346\211\247\350\241\214\346\211\200\346\234\211\345\244\215\345\210\266", nullptr));
+        btnMapExcleDo->setText(QCoreApplication::translate("MainWindow", "\346\211\247\350\241\214MAP\346\265\213\346\212\245\345\244\215\345\210\266", nullptr));
         btnExcleDo->setText(QCoreApplication::translate("MainWindow", "\346\211\247\350\241\214\346\265\213\346\212\245\345\244\215\345\210\266", nullptr));
+        btnMapLogDo->setText(QCoreApplication::translate("MainWindow", "\346\211\247\350\241\214MAP\345\222\214LOG\345\244\215\345\210\266", nullptr));
         menu->setTitle(QCoreApplication::translate("MainWindow", "\350\256\276\347\275\256", nullptr));
     } // retranslateUi
 

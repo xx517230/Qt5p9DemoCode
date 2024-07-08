@@ -6,38 +6,225 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>741</width>
-    <height>421</height>
+    <width>736</width>
+    <height>486</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>CopyFromNet</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout_8">
+   <layout class="QGridLayout" name="gridLayout_10">
     <item row="0" column="0">
      <widget class="QGroupBox" name="groupBox_10">
       <property name="title">
        <string/>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
-       <item>
-        <widget class="QGroupBox" name="groupBox">
-         <property name="title">
-          <string>批号</string>
+      <layout class="QGridLayout" name="gridLayout_8">
+       <item row="4" column="0">
+        <widget class="QSplitter" name="splitter_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
          </property>
-         <layout class="QGridLayout" name="gridLayout_2">
-          <item row="0" column="0">
-           <widget class="QLineEdit" name="editLotId">
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
-          </item>
-         </layout>
+         <widget class="QGroupBox" name="groupBox_11">
+          <property name="title">
+           <string>LOG选择</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QCheckBox" name="chkBoxCSV">
+             <property name="text">
+              <string>CSV</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="chkBoxWmpTDO">
+             <property name="text">
+              <string>wmp</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="chkBoxsumryTDO">
+             <property name="text">
+              <string>sumry</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="chkBoxSTDF">
+             <property name="text">
+              <string>STDF</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_13">
+          <property name="title">
+           <string>机型选择</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="0" column="0">
+            <widget class="QRadioButton" name="rbtnTsKMap_2">
+             <property name="text">
+              <string>3360P</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QRadioButton" name="rbtnTsKMap_3">
+             <property name="text">
+              <string>3380D</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
         </widget>
        </item>
-       <item>
+       <item row="3" column="0">
+        <widget class="QSplitter" name="splitter">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="title">
+           <string>MAP保存/LOG流程选择</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="0" column="2">
+            <widget class="QCheckBox" name="chkBoxQTP">
+             <property name="text">
+              <string>QTP</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QCheckBox" name="chkBoxCP1">
+             <property name="text">
+              <string>CP1</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QCheckBox" name="chkBoxQTP_CP2">
+             <property name="text">
+              <string>QTP_CP2</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QCheckBox" name="chkBoxCP">
+             <property name="text">
+              <string>CP</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QCheckBox" name="chkBoxCP4">
+             <property name="text">
+              <string>CP4</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QCheckBox" name="chkBoxCP3">
+             <property name="text">
+              <string>CP3</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QCheckBox" name="chkBoxCP2">
+             <property name="text">
+              <string>CP2</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QCheckBox" name="chkBoxQTPQ">
+             <property name="text">
+              <string>QTPQ</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QPushButton" name="btnAllSelect">
+             <property name="text">
+              <string>全选</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QPushButton" name="btnCancelSelect">
+             <property name="text">
+              <string>空选</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QPushButton" name="btnInvertSelect">
+             <property name="text">
+              <string>反选</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_5">
+          <property name="title">
+           <string>常用流程</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="1" column="0">
+            <widget class="QPushButton" name="btnXHQTP">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>XH-QTP</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QPushButton" name="btnZCQTP">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>ZC-QTP</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QPushButton" name="btnXHCP">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>XH-CP</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item row="1" column="0">
         <widget class="QGroupBox" name="groupBox_6">
          <property name="title">
           <string>map路径选择</string>
@@ -49,7 +236,7 @@
              <string>MAP保存</string>
             </property>
             <property name="checked">
-             <bool>true</bool>
+             <bool>false</bool>
             </property>
            </widget>
           </item>
@@ -57,6 +244,9 @@
            <widget class="QRadioButton" name="rbtnTsKMap">
             <property name="text">
              <string>TSK-MAP</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -77,7 +267,36 @@
          </layout>
         </widget>
        </item>
-       <item>
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string>批号</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="0">
+           <widget class="QLineEdit" name="editLotId">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="5" column="0">
         <spacer name="verticalSpacer_4">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -85,164 +304,10 @@
          <property name="sizeHint" stdset="0">
           <size>
            <width>20</width>
-           <height>0</height>
+           <height>40</height>
           </size>
          </property>
         </spacer>
-       </item>
-       <item>
-        <widget class="QGroupBox" name="groupBox_4">
-         <property name="title">
-          <string/>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_5">
-          <item row="0" column="0">
-           <layout class="QVBoxLayout" name="verticalLayout">
-            <item>
-             <widget class="QGroupBox" name="groupBox_2">
-              <property name="title">
-               <string>MAP保存流程选择</string>
-              </property>
-              <layout class="QGridLayout" name="gridLayout_4">
-               <item row="0" column="0">
-                <widget class="QCheckBox" name="chkBoxCP">
-                 <property name="text">
-                  <string>CP</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="1">
-                <widget class="QCheckBox" name="chkBoxCP1">
-                 <property name="text">
-                  <string>CP1</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="2">
-                <widget class="QCheckBox" name="chkBoxQTP">
-                 <property name="text">
-                  <string>QTP</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="1">
-                <widget class="QCheckBox" name="chkBoxCP2">
-                 <property name="text">
-                  <string>CP2</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="2">
-                <widget class="QCheckBox" name="chkBoxQTPQ">
-                 <property name="text">
-                  <string>QTPQ</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="2" column="1">
-                <widget class="QCheckBox" name="chkBoxCP3">
-                 <property name="text">
-                  <string>CP3</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="3" column="1">
-                <widget class="QCheckBox" name="chkBoxCP4">
-                 <property name="text">
-                  <string>CP4</string>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout">
-              <item>
-               <widget class="QPushButton" name="btnAllSelect">
-                <property name="text">
-                 <string>全选</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="btnInvertSelect">
-                <property name="text">
-                 <string>反选</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="btnCancelSelect">
-                <property name="text">
-                 <string>空选</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-           </layout>
-          </item>
-          <item row="1" column="0">
-           <spacer name="verticalSpacer_5">
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>20</width>
-              <height>40</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item row="0" column="1">
-           <widget class="QGroupBox" name="groupBox_5">
-            <property name="title">
-             <string/>
-            </property>
-            <layout class="QGridLayout" name="gridLayout">
-             <item row="1" column="0">
-              <widget class="QPushButton" name="btnXHQTP">
-               <property name="font">
-                <font>
-                 <pointsize>8</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>XH-QTP</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="0">
-              <widget class="QPushButton" name="btnZCQTP">
-               <property name="font">
-                <font>
-                 <pointsize>8</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>ZC-QTP</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="0">
-              <widget class="QPushButton" name="btnXHCP">
-               <property name="font">
-                <font>
-                 <pointsize>8</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>XH-CP</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
-         </layout>
-        </widget>
        </item>
       </layout>
      </widget>
@@ -252,22 +317,15 @@
       <property name="title">
        <string/>
       </property>
-      <layout class="QGridLayout" name="gridLayout_6">
+      <layout class="QGridLayout" name="gridLayout_9">
        <item row="0" column="0">
         <widget class="QGroupBox" name="groupBox_3">
          <property name="title">
-          <string>目标路径</string>
+          <string>输出路径</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_7">
           <item row="0" column="0">
            <widget class="QLineEdit" name="editOutPutPath"/>
-          </item>
-          <item row="0" column="1">
-           <widget class="QPushButton" name="pbtnSelectPath">
-            <property name="text">
-             <string>选择</string>
-            </property>
-           </widget>
           </item>
          </layout>
         </widget>
@@ -306,14 +364,14 @@
         </widget>
        </item>
        <item row="2" column="0">
-        <spacer name="verticalSpacer">
+        <spacer name="verticalSpacer_2">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
            <width>20</width>
-           <height>40</height>
+           <height>63</height>
           </size>
          </property>
         </spacer>
@@ -323,18 +381,46 @@
          <property name="title">
           <string/>
          </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_3">
-          <item>
+         <layout class="QGridLayout" name="gridLayout_6">
+          <item row="0" column="0">
            <widget class="QPushButton" name="btnMapDo">
             <property name="text">
              <string>执行MAP复制</string>
             </property>
            </widget>
           </item>
-          <item>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="btnLogDo">
+            <property name="text">
+             <string>执行LOG复制</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0" colspan="3">
+           <widget class="QPushButton" name="btnAllDo">
+            <property name="text">
+             <string>执行所有复制</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" colspan="3">
+           <widget class="QPushButton" name="btnMapExcleDo">
+            <property name="text">
+             <string>执行MAP测报复制</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
            <widget class="QPushButton" name="btnExcleDo">
             <property name="text">
              <string>执行测报复制</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" colspan="3">
+           <widget class="QPushButton" name="btnMapLogDo">
+            <property name="text">
+             <string>执行MAP和LOG复制</string>
             </property>
            </widget>
           </item>
@@ -342,14 +428,14 @@
         </widget>
        </item>
        <item row="4" column="0">
-        <spacer name="verticalSpacer_2">
+        <spacer name="verticalSpacer">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
            <width>20</width>
-           <height>40</height>
+           <height>63</height>
           </size>
          </property>
         </spacer>
@@ -364,7 +450,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>741</width>
+     <width>736</width>
      <height>20</height>
     </rect>
    </property>
@@ -372,8 +458,9 @@
     <property name="title">
      <string>设置</string>
     </property>
-    <addaction name="actionPath"/>
     <addaction name="actionExcelPath"/>
+    <addaction name="actionPath"/>
+    <addaction name="actionLOGPath"/>
    </widget>
    <addaction name="menu"/>
   </widget>
@@ -385,6 +472,14 @@
   <action name="actionExcelPath">
    <property name="text">
     <string>测报路径</string>
+   </property>
+  </action>
+  <action name="actionLOGPath">
+   <property name="text">
+    <string>LOG路径</string>
+   </property>
+   <property name="toolTip">
+    <string>LOG路径</string>
    </property>
   </action>
  </widget>

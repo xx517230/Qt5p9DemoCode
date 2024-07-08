@@ -30,6 +30,12 @@ private slots:
     void on_btnZCQTP_clicked();
     void on_btnMapDo_clicked();
 
+    void on_rbtnTsKMap_clicked();
+
+    void on_rbtnP12Map_clicked();
+
+    void on_rbtnP8Map_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
