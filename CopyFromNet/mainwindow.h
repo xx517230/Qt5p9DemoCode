@@ -36,6 +36,10 @@ private slots:
 
     void on_rbtnP8Map_clicked();
 
+    void on_btnExcleDo_clicked();
+
+    void on_btnLogDo_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
