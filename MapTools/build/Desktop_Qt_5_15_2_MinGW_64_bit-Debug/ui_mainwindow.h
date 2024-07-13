@@ -105,7 +105,19 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(823, 493);
+        MainWindow->resize(823, 433);
+        actionPath = new QAction(MainWindow);
+        actionPath->setObjectName(QString::fromUtf8("actionPath"));
+        actionExcelPath = new QAction(MainWindow);
+        actionExcelPath->setObjectName(QString::fromUtf8("actionExcelPath"));
+        actionLOGPath = new QAction(MainWindow);
+        actionLOGPath->setObjectName(QString::fromUtf8("actionLOGPath"));
+        centralwidget = new QWidget(MainWindow);
+        centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
+        gridLayout_11 = new QGridLayout(centralwidget);
+        gridLayout_11->setObjectName(QString::fromUtf8("gridLayout_11"));
+        tabWidget = new QTabWidget(centralwidget);
+        tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
         QPalette palette;
         QBrush brush(QColor(0, 0, 0, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -137,6 +149,7 @@ public:
 #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette.setBrush(QPalette::Active, QPalette::PlaceholderText, brush5);
 #endif
+        palette.setBrush(QPalette::Active, QPalette::Background, brush1);
         palette.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
         palette.setBrush(QPalette::Inactive, QPalette::Button, brush1);
         palette.setBrush(QPalette::Inactive, QPalette::Light, brush1);
@@ -155,6 +168,7 @@ public:
 #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush5);
 #endif
+        palette.setBrush(QPalette::Inactive, QPalette::Background, brush1);
         palette.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
         palette.setBrush(QPalette::Disabled, QPalette::Button, brush1);
         palette.setBrush(QPalette::Disabled, QPalette::Light, brush1);
@@ -175,75 +189,8 @@ public:
 #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush6);
 #endif
-        MainWindow->setPalette(palette);
-        actionPath = new QAction(MainWindow);
-        actionPath->setObjectName(QString::fromUtf8("actionPath"));
-        actionExcelPath = new QAction(MainWindow);
-        actionExcelPath->setObjectName(QString::fromUtf8("actionExcelPath"));
-        actionLOGPath = new QAction(MainWindow);
-        actionLOGPath->setObjectName(QString::fromUtf8("actionLOGPath"));
-        centralwidget = new QWidget(MainWindow);
-        centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        gridLayout_11 = new QGridLayout(centralwidget);
-        gridLayout_11->setObjectName(QString::fromUtf8("gridLayout_11"));
-        tabWidget = new QTabWidget(centralwidget);
-        tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
-        QPalette palette1;
-        palette1.setBrush(QPalette::Active, QPalette::WindowText, brush);
-        palette1.setBrush(QPalette::Active, QPalette::Button, brush1);
-        palette1.setBrush(QPalette::Active, QPalette::Light, brush1);
-        palette1.setBrush(QPalette::Active, QPalette::Midlight, brush1);
-        palette1.setBrush(QPalette::Active, QPalette::Dark, brush2);
-        palette1.setBrush(QPalette::Active, QPalette::Mid, brush3);
-        palette1.setBrush(QPalette::Active, QPalette::Text, brush);
-        palette1.setBrush(QPalette::Active, QPalette::BrightText, brush1);
-        palette1.setBrush(QPalette::Active, QPalette::ButtonText, brush);
-        palette1.setBrush(QPalette::Active, QPalette::Base, brush1);
-        palette1.setBrush(QPalette::Active, QPalette::Window, brush1);
-        palette1.setBrush(QPalette::Active, QPalette::Shadow, brush);
-        palette1.setBrush(QPalette::Active, QPalette::AlternateBase, brush1);
-        palette1.setBrush(QPalette::Active, QPalette::ToolTipBase, brush4);
-        palette1.setBrush(QPalette::Active, QPalette::ToolTipText, brush);
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette1.setBrush(QPalette::Active, QPalette::PlaceholderText, brush5);
-#endif
-        palette1.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
-        palette1.setBrush(QPalette::Inactive, QPalette::Button, brush1);
-        palette1.setBrush(QPalette::Inactive, QPalette::Light, brush1);
-        palette1.setBrush(QPalette::Inactive, QPalette::Midlight, brush1);
-        palette1.setBrush(QPalette::Inactive, QPalette::Dark, brush2);
-        palette1.setBrush(QPalette::Inactive, QPalette::Mid, brush3);
-        palette1.setBrush(QPalette::Inactive, QPalette::Text, brush);
-        palette1.setBrush(QPalette::Inactive, QPalette::BrightText, brush1);
-        palette1.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
-        palette1.setBrush(QPalette::Inactive, QPalette::Base, brush1);
-        palette1.setBrush(QPalette::Inactive, QPalette::Window, brush1);
-        palette1.setBrush(QPalette::Inactive, QPalette::Shadow, brush);
-        palette1.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush1);
-        palette1.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush4);
-        palette1.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush);
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette1.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush5);
-#endif
-        palette1.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
-        palette1.setBrush(QPalette::Disabled, QPalette::Button, brush1);
-        palette1.setBrush(QPalette::Disabled, QPalette::Light, brush1);
-        palette1.setBrush(QPalette::Disabled, QPalette::Midlight, brush1);
-        palette1.setBrush(QPalette::Disabled, QPalette::Dark, brush2);
-        palette1.setBrush(QPalette::Disabled, QPalette::Mid, brush3);
-        palette1.setBrush(QPalette::Disabled, QPalette::Text, brush2);
-        palette1.setBrush(QPalette::Disabled, QPalette::BrightText, brush1);
-        palette1.setBrush(QPalette::Disabled, QPalette::ButtonText, brush2);
-        palette1.setBrush(QPalette::Disabled, QPalette::Base, brush1);
-        palette1.setBrush(QPalette::Disabled, QPalette::Window, brush1);
-        palette1.setBrush(QPalette::Disabled, QPalette::Shadow, brush);
-        palette1.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush1);
-        palette1.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush4);
-        palette1.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush);
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette1.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush6);
-#endif
-        tabWidget->setPalette(palette1);
+        palette.setBrush(QPalette::Disabled, QPalette::Background, brush1);
+        tabWidget->setPalette(palette);
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
         gridLayout_10 = new QGridLayout(tab);
@@ -522,8 +469,8 @@ public:
         MainWindow->setMenuBar(menubar);
 
         menubar->addAction(menu->menuAction());
-        menu->addAction(actionExcelPath);
         menu->addAction(actionPath);
+        menu->addAction(actionExcelPath);
         menu->addAction(actionLOGPath);
 
         retranslateUi(MainWindow);
@@ -536,7 +483,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "CopyFromNet", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         actionPath->setText(QCoreApplication::translate("MainWindow", "MAP\350\267\257\345\276\204", nullptr));
         actionExcelPath->setText(QCoreApplication::translate("MainWindow", "\346\265\213\346\212\245\350\267\257\345\276\204", nullptr));
         actionLOGPath->setText(QCoreApplication::translate("MainWindow", "LOG\350\267\257\345\276\204", nullptr));

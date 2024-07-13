@@ -452,11 +452,3 @@ void MainWindow::on_btnLogDo_clicked()
 }
 
 
-
-void MainWindow::on_groupBox_6_clicked()
-{
-    QWidget *btn=QRadioButton*<static_cast>(sender());
-
-
-}
-

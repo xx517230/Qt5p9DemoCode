@@ -252,6 +252,7 @@ Makefile: ../../samp4_7.pro D:/CodeTools/Qt/5.15.2/mingw81_64/mkspecs/win32-g++/
 		D:/CodeTools/Qt/5.15.2/mingw81_64/mkspecs/features/qt_config.prf \
 		D:/CodeTools/Qt/5.15.2/mingw81_64/mkspecs/win32-g++/qmake.conf \
 		D:/CodeTools/Qt/5.15.2/mingw81_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		D:/CodeTools/Qt/5.15.2/mingw81_64/mkspecs/features/exclusive_builds.prf \
 		D:/CodeTools/Qt/5.15.2/mingw81_64/mkspecs/features/toolchain.prf \
 		D:/CodeTools/Qt/5.15.2/mingw81_64/mkspecs/features/default_pre.prf \
@@ -280,9 +281,8 @@ Makefile: ../../samp4_7.pro D:/CodeTools/Qt/5.15.2/mingw81_64/mkspecs/win32-g++/
 		D:/CodeTools/Qt/5.15.2/mingw81_64/lib/Qt5Gui.prl \
 		D:/CodeTools/Qt/5.15.2/mingw81_64/lib/Qt5Core.prl \
 		D:/CodeTools/Qt/5.15.2/mingw81_64/lib/qtmain.prl \
-		.qmake.stash \
 		D:/CodeTools/Qt/5.15.2/mingw81_64/mkspecs/features/build_pass.prf \
-		../../icon.qrc
+		../../res.qrc
 	$(QMAKE) -o Makefile ..\..\samp4_7.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 D:/CodeTools/Qt/5.15.2/mingw81_64/mkspecs/features/spec_pre.prf:
 D:/CodeTools/Qt/5.15.2/mingw81_64/mkspecs/qdevice.pri:
@@ -466,6 +466,7 @@ D:/CodeTools/Qt/5.15.2/mingw81_64/mkspecs/features/qt_functions.prf:
 D:/CodeTools/Qt/5.15.2/mingw81_64/mkspecs/features/qt_config.prf:
 D:/CodeTools/Qt/5.15.2/mingw81_64/mkspecs/win32-g++/qmake.conf:
 D:/CodeTools/Qt/5.15.2/mingw81_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 D:/CodeTools/Qt/5.15.2/mingw81_64/mkspecs/features/exclusive_builds.prf:
 D:/CodeTools/Qt/5.15.2/mingw81_64/mkspecs/features/toolchain.prf:
 D:/CodeTools/Qt/5.15.2/mingw81_64/mkspecs/features/default_pre.prf:
@@ -494,9 +495,8 @@ D:/CodeTools/Qt/5.15.2/mingw81_64/lib/Qt5Widgets.prl:
 D:/CodeTools/Qt/5.15.2/mingw81_64/lib/Qt5Gui.prl:
 D:/CodeTools/Qt/5.15.2/mingw81_64/lib/Qt5Core.prl:
 D:/CodeTools/Qt/5.15.2/mingw81_64/lib/qtmain.prl:
-.qmake.stash:
 D:/CodeTools/Qt/5.15.2/mingw81_64/mkspecs/features/build_pass.prf:
-../../icon.qrc:
+../../res.qrc:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\..\samp4_7.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 

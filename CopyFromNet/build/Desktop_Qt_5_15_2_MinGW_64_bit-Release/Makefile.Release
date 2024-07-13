@@ -466,6 +466,48 @@ release/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/qtabwidget.h \
 		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtGui/qicon.h \
 		ui_mainwindow.h \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtCore/QVariant \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/QAction \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/qaction.h \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/qactiongroup.h \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/QApplication \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/qapplication.h \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtCore/qcoreapplication.h \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtCore/qeventloop.h \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/qdesktopwidget.h \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtGui/qguiapplication.h \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtGui/qinputmethod.h \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/QCheckBox \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/qcheckbox.h \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractbutton.h \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/QGridLayout \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/qgridlayout.h \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/qlayout.h \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/qlayoutitem.h \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/qboxlayout.h \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/QGroupBox \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/qgroupbox.h \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/qframe.h \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/QHBoxLayout \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/QLineEdit \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/qlineedit.h \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtGui/qtextcursor.h \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtGui/qtextformat.h \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtGui/qpen.h \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtGui/qtextoption.h \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/QMenu \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/qmenu.h \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/QMenuBar \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/qmenubar.h \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/QPushButton \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/qpushbutton.h \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/QRadioButton \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/qradiobutton.h \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/QSpacerItem \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/QSplitter \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/qsplitter.h \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/QTabWidget \
+		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtWidgets/QWidget \
 		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtCore/QList \
 		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtCore/QString \
 		D:/CodeTools/Qt/5.15.2/mingw81_64/include/QtCore/QDir \
