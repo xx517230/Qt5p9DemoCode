@@ -12,12 +12,18 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QGridLayout>
+#include <QtWidgets/QGroupBox>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QSplitter>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QToolBox>
+#include <QtWidgets/QToolButton>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -39,18 +45,39 @@ public:
     QGridLayout *gridLayout;
     QSplitter *splitter;
     QToolBox *toolBox;
-    QWidget *page;
-    QWidget *page_2;
+    QWidget *page_QListWidget;
+    QGridLayout *gridLayout_2;
+    QToolButton *tBtnListIni;
+    QToolButton *tBtnListClear;
+    QToolButton *tBtnListInsert;
+    QToolButton *tBtnListApped;
+    QToolButton *tBtnListDelete;
+    QWidget *page_QTreeWidget;
+    QWidget *page_QTabWidget;
     QTabWidget *tabWidget;
-    QWidget *tab;
-    QWidget *tab_2;
+    QWidget *tabListWidget;
+    QGridLayout *gridLayout_5;
+    QGroupBox *groupBox;
+    QGridLayout *gridLayout_3;
+    QLabel *label;
+    QLineEdit *lineEdit;
+    QCheckBox *checkBox;
+    QGroupBox *groupBox_2;
+    QGridLayout *gridLayout_4;
+    QToolButton *tBtnItemSelect;
+    QToolButton *tBtnAllSelect;
+    QToolButton *tBtnAllClear;
+    QToolButton *tBtnInvertSelect;
+    QListWidget *listWidget;
+    QWidget *tabTreeWidget;
+    QWidget *tabTabWidget;
     QToolBar *toolBar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(654, 428);
+        MainWindow->resize(719, 564);
         actListIni = new QAction(MainWindow);
         actListIni->setObjectName(QString::fromUtf8("actListIni"));
         QIcon icon;
@@ -104,26 +131,116 @@ public:
         toolBox->setObjectName(QString::fromUtf8("toolBox"));
         toolBox->setMinimumSize(QSize(120, 0));
         toolBox->setMaximumSize(QSize(150, 16777215));
-        page = new QWidget();
-        page->setObjectName(QString::fromUtf8("page"));
-        page->setGeometry(QRect(0, 0, 147, 294));
-        toolBox->addItem(page, QString::fromUtf8("QListWidget \346\223\215\344\275\234"));
-        page_2 = new QWidget();
-        page_2->setObjectName(QString::fromUtf8("page_2"));
-        page_2->setGeometry(QRect(0, 0, 147, 294));
-        toolBox->addItem(page_2, QString::fromUtf8("QTabWidget \346\223\215\344\275\234"));
+        page_QListWidget = new QWidget();
+        page_QListWidget->setObjectName(QString::fromUtf8("page_QListWidget"));
+        page_QListWidget->setGeometry(QRect(0, 0, 150, 401));
+        gridLayout_2 = new QGridLayout(page_QListWidget);
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        tBtnListIni = new QToolButton(page_QListWidget);
+        tBtnListIni->setObjectName(QString::fromUtf8("tBtnListIni"));
+
+        gridLayout_2->addWidget(tBtnListIni, 0, 0, 1, 1);
+
+        tBtnListClear = new QToolButton(page_QListWidget);
+        tBtnListClear->setObjectName(QString::fromUtf8("tBtnListClear"));
+
+        gridLayout_2->addWidget(tBtnListClear, 1, 0, 1, 1);
+
+        tBtnListInsert = new QToolButton(page_QListWidget);
+        tBtnListInsert->setObjectName(QString::fromUtf8("tBtnListInsert"));
+
+        gridLayout_2->addWidget(tBtnListInsert, 2, 0, 1, 1);
+
+        tBtnListApped = new QToolButton(page_QListWidget);
+        tBtnListApped->setObjectName(QString::fromUtf8("tBtnListApped"));
+
+        gridLayout_2->addWidget(tBtnListApped, 3, 0, 1, 1);
+
+        tBtnListDelete = new QToolButton(page_QListWidget);
+        tBtnListDelete->setObjectName(QString::fromUtf8("tBtnListDelete"));
+
+        gridLayout_2->addWidget(tBtnListDelete, 4, 0, 1, 1);
+
+        toolBox->addItem(page_QListWidget, QString::fromUtf8("QListWidget \346\223\215\344\275\234"));
+        page_QTreeWidget = new QWidget();
+        page_QTreeWidget->setObjectName(QString::fromUtf8("page_QTreeWidget"));
+        page_QTreeWidget->setGeometry(QRect(0, 0, 150, 323));
+        toolBox->addItem(page_QTreeWidget, QString::fromUtf8("QTreeWidget \346\223\215\344\275\234"));
+        page_QTabWidget = new QWidget();
+        page_QTabWidget->setObjectName(QString::fromUtf8("page_QTabWidget"));
+        page_QTabWidget->setGeometry(QRect(0, 0, 150, 323));
+        toolBox->addItem(page_QTabWidget, QString::fromUtf8("QTabWidget \346\223\215\344\275\234"));
         splitter->addWidget(toolBox);
         tabWidget = new QTabWidget(splitter);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
-        tab = new QWidget();
-        tab->setObjectName(QString::fromUtf8("tab"));
-        tabWidget->addTab(tab, QString());
-        tab_2 = new QWidget();
-        tab_2->setObjectName(QString::fromUtf8("tab_2"));
-        tabWidget->addTab(tab_2, QString());
+        tabListWidget = new QWidget();
+        tabListWidget->setObjectName(QString::fromUtf8("tabListWidget"));
+        gridLayout_5 = new QGridLayout(tabListWidget);
+        gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
+        groupBox = new QGroupBox(tabListWidget);
+        groupBox->setObjectName(QString::fromUtf8("groupBox"));
+        gridLayout_3 = new QGridLayout(groupBox);
+        gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
+        label = new QLabel(groupBox);
+        label->setObjectName(QString::fromUtf8("label"));
+
+        gridLayout_3->addWidget(label, 0, 0, 1, 1);
+
+        lineEdit = new QLineEdit(groupBox);
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+
+        gridLayout_3->addWidget(lineEdit, 0, 1, 1, 1);
+
+        checkBox = new QCheckBox(groupBox);
+        checkBox->setObjectName(QString::fromUtf8("checkBox"));
+
+        gridLayout_3->addWidget(checkBox, 0, 2, 1, 1);
+
+
+        gridLayout_5->addWidget(groupBox, 0, 0, 1, 1);
+
+        groupBox_2 = new QGroupBox(tabListWidget);
+        groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
+        gridLayout_4 = new QGridLayout(groupBox_2);
+        gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
+        tBtnItemSelect = new QToolButton(groupBox_2);
+        tBtnItemSelect->setObjectName(QString::fromUtf8("tBtnItemSelect"));
+
+        gridLayout_4->addWidget(tBtnItemSelect, 0, 0, 1, 1);
+
+        tBtnAllSelect = new QToolButton(groupBox_2);
+        tBtnAllSelect->setObjectName(QString::fromUtf8("tBtnAllSelect"));
+
+        gridLayout_4->addWidget(tBtnAllSelect, 0, 1, 1, 1);
+
+        tBtnAllClear = new QToolButton(groupBox_2);
+        tBtnAllClear->setObjectName(QString::fromUtf8("tBtnAllClear"));
+
+        gridLayout_4->addWidget(tBtnAllClear, 0, 2, 1, 1);
+
+        tBtnInvertSelect = new QToolButton(groupBox_2);
+        tBtnInvertSelect->setObjectName(QString::fromUtf8("tBtnInvertSelect"));
+
+        gridLayout_4->addWidget(tBtnInvertSelect, 0, 3, 1, 1);
+
+
+        gridLayout_5->addWidget(groupBox_2, 1, 0, 1, 1);
+
+        listWidget = new QListWidget(tabListWidget);
+        listWidget->setObjectName(QString::fromUtf8("listWidget"));
+
+        gridLayout_5->addWidget(listWidget, 2, 0, 1, 1);
+
+        tabWidget->addTab(tabListWidget, QString());
+        tabTreeWidget = new QWidget();
+        tabTreeWidget->setObjectName(QString::fromUtf8("tabTreeWidget"));
+        tabWidget->addTab(tabTreeWidget, QString());
+        tabTabWidget = new QWidget();
+        tabTabWidget->setObjectName(QString::fromUtf8("tabTabWidget"));
+        tabWidget->addTab(tabTabWidget, QString());
         splitter->addWidget(tabWidget);
 
-        gridLayout->addWidget(splitter, 0, 0, 1, 1);
+        gridLayout->addWidget(splitter, 0, 1, 1, 1);
 
         MainWindow->setCentralWidget(centralwidget);
         toolBar = new QToolBar(MainWindow);
@@ -141,6 +258,7 @@ public:
         retranslateUi(MainWindow);
 
         toolBox->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -201,10 +319,25 @@ public:
 #if QT_CONFIG(tooltip)
         actSelPopMenu->setToolTip(QCoreApplication::translate("MainWindow", "\351\241\271\351\200\211\346\213\251", nullptr));
 #endif // QT_CONFIG(tooltip)
-        toolBox->setItemText(toolBox->indexOf(page), QCoreApplication::translate("MainWindow", "QListWidget \346\223\215\344\275\234", nullptr));
-        toolBox->setItemText(toolBox->indexOf(page_2), QCoreApplication::translate("MainWindow", "QTabWidget \346\223\215\344\275\234", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "Tab 1", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "Tab 2", nullptr));
+        tBtnListIni->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        tBtnListClear->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        tBtnListInsert->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        tBtnListApped->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        tBtnListDelete->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        toolBox->setItemText(toolBox->indexOf(page_QListWidget), QCoreApplication::translate("MainWindow", "QListWidget \346\223\215\344\275\234", nullptr));
+        toolBox->setItemText(toolBox->indexOf(page_QTreeWidget), QCoreApplication::translate("MainWindow", "QTreeWidget \346\223\215\344\275\234", nullptr));
+        toolBox->setItemText(toolBox->indexOf(page_QTabWidget), QCoreApplication::translate("MainWindow", "QTabWidget \346\223\215\344\275\234", nullptr));
+        groupBox->setTitle(QString());
+        label->setText(QCoreApplication::translate("MainWindow", "\345\275\223\345\211\215\351\241\271\345\217\230\345\214\226", nullptr));
+        checkBox->setText(QCoreApplication::translate("MainWindow", "\345\217\257\347\274\226\350\276\221", nullptr));
+        groupBox_2->setTitle(QString());
+        tBtnItemSelect->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        tBtnAllSelect->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        tBtnAllClear->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        tBtnInvertSelect->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tabListWidget), QCoreApplication::translate("MainWindow", "QListWidget", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tabTreeWidget), QCoreApplication::translate("MainWindow", "QTreeWidget", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tabTabWidget), QCoreApplication::translate("MainWindow", "QTabWidget", nullptr));
         toolBar->setWindowTitle(QCoreApplication::translate("MainWindow", "toolBar", nullptr));
     } // retranslateUi
 

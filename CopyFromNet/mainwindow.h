@@ -40,7 +40,6 @@ private slots:
 
     void on_btnLogDo_clicked();
 
-    void on_groupBox_6_clicked();
 
 private:
     Ui::MainWindow *ui;
