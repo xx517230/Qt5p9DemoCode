@@ -20,9 +20,11 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QProgressBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
 #include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QSpinBox>
 #include <QtWidgets/QSplitter>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QWidget>
@@ -98,6 +100,18 @@ public:
     QPushButton *btnExcleDo;
     QPushButton *btnMapDo;
     QSpacerItem *verticalSpacer_2;
+    QWidget *tab_2;
+    QGroupBox *groupBox_4;
+    QGroupBox *groupBox_12;
+    QProgressBar *progressBar;
+    QGroupBox *groupBox_14;
+    QCheckBox *checkBox;
+    QCheckBox *checkBox_3;
+    QSpinBox *spinBox;
+    QCheckBox *checkBox_2;
+    QCheckBox *checkBox_4;
+    QCheckBox *checkBox_5;
+    QCheckBox *checkBox_6;
     QMenuBar *menubar;
     QMenu *menu;
 
@@ -105,7 +119,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(823, 433);
+        MainWindow->resize(823, 522);
         actionPath = new QAction(MainWindow);
         actionPath->setObjectName(QString::fromUtf8("actionPath"));
         actionExcelPath = new QAction(MainWindow);
@@ -384,8 +398,52 @@ public:
         gridLayout_10->addWidget(splitter_3, 0, 0, 1, 1);
 
         tabWidget->addTab(tab, QString());
+        tab_2 = new QWidget();
+        tab_2->setObjectName(QString::fromUtf8("tab_2"));
+        groupBox_4 = new QGroupBox(tab_2);
+        groupBox_4->setObjectName(QString::fromUtf8("groupBox_4"));
+        groupBox_4->setGeometry(QRect(10, 0, 601, 301));
+        groupBox_12 = new QGroupBox(tab_2);
+        groupBox_12->setObjectName(QString::fromUtf8("groupBox_12"));
+        groupBox_12->setGeometry(QRect(10, 320, 601, 91));
+        progressBar = new QProgressBar(tab_2);
+        progressBar->setObjectName(QString::fromUtf8("progressBar"));
+        progressBar->setGeometry(QRect(10, 430, 511, 23));
+        progressBar->setValue(24);
+        groupBox_14 = new QGroupBox(tab_2);
+        groupBox_14->setObjectName(QString::fromUtf8("groupBox_14"));
+        groupBox_14->setGeometry(QRect(620, 0, 171, 301));
+        checkBox = new QCheckBox(groupBox_14);
+        checkBox->setObjectName(QString::fromUtf8("checkBox"));
+        checkBox->setGeometry(QRect(10, 70, 82, 21));
+        checkBox->setChecked(true);
+        checkBox_3 = new QCheckBox(groupBox_14);
+        checkBox_3->setObjectName(QString::fromUtf8("checkBox_3"));
+        checkBox_3->setGeometry(QRect(10, 40, 82, 21));
+        checkBox_3->setChecked(true);
+        spinBox = new QSpinBox(groupBox_14);
+        spinBox->setObjectName(QString::fromUtf8("spinBox"));
+        spinBox->setGeometry(QRect(120, 50, 42, 24));
+        spinBox->setValue(30);
+        checkBox_2 = new QCheckBox(groupBox_14);
+        checkBox_2->setObjectName(QString::fromUtf8("checkBox_2"));
+        checkBox_2->setGeometry(QRect(10, 20, 111, 21));
+        checkBox_2->setChecked(true);
+        checkBox_4 = new QCheckBox(groupBox_14);
+        checkBox_4->setObjectName(QString::fromUtf8("checkBox_4"));
+        checkBox_4->setGeometry(QRect(10, 100, 151, 21));
+        checkBox_4->setChecked(true);
+        checkBox_5 = new QCheckBox(groupBox_14);
+        checkBox_5->setObjectName(QString::fromUtf8("checkBox_5"));
+        checkBox_5->setGeometry(QRect(10, 120, 151, 21));
+        checkBox_5->setChecked(false);
+        checkBox_6 = new QCheckBox(groupBox_14);
+        checkBox_6->setObjectName(QString::fromUtf8("checkBox_6"));
+        checkBox_6->setGeometry(QRect(10, 140, 151, 21));
+        checkBox_6->setChecked(true);
+        tabWidget->addTab(tab_2, QString());
 
-        gridLayout_11->addWidget(tabWidget, 0, 0, 1, 1);
+        gridLayout_11->addWidget(tabWidget, 0, 1, 1, 1);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -402,7 +460,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -459,6 +517,28 @@ public:
         btnExcleDo->setText(QCoreApplication::translate("MainWindow", "\346\265\213\346\212\245\345\244\215\345\210\266", nullptr));
         btnMapDo->setText(QCoreApplication::translate("MainWindow", "MAP\345\244\215\345\210\266", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "CopyFromNet", nullptr));
+        groupBox_4->setTitle(QCoreApplication::translate("MainWindow", "\351\200\211\346\213\251\347\233\256\345\275\225\346\210\226\346\226\207\344\273\266", nullptr));
+        groupBox_12->setTitle(QString());
+        groupBox_14->setTitle(QCoreApplication::translate("MainWindow", "\350\256\276\347\275\256", nullptr));
+        checkBox->setText(QCoreApplication::translate("MainWindow", "\346\227\266\351\227\264\347\273\237\350\256\241", nullptr));
+        checkBox_3->setText(QCoreApplication::translate("MainWindow", "\351\227\264\351\232\224\346\227\266\351\227\264", nullptr));
+#if QT_CONFIG(tooltip)
+        spinBox->setToolTip(QCoreApplication::translate("MainWindow", "<html><head/><body><p>\350\256\276\347\275\256\351\227\264\351\232\224\346\227\266\351\227\264\357\274\214\346\200\273\346\227\266\351\227\264\344\274\232\345\207\217\345\216\273\345\274\202\345\270\270\347\232\204\351\227\264\351\232\224\346\227\266\351\227\264\357\274\214\345\246\202\345\201\234\346\255\242\346\227\266\351\227\264\357\274\214\351\273\230\350\256\24430S</p></body></html>", nullptr));
+#endif // QT_CONFIG(tooltip)
+        checkBox_2->setText(QCoreApplication::translate("MainWindow", "\346\240\241\351\252\214\346\240\274\345\274\217", nullptr));
+#if QT_CONFIG(tooltip)
+        checkBox_4->setToolTip(QCoreApplication::translate("MainWindow", "<html><head/><body><p>\346\230\257\345\220\246\344\277\235\345\255\230SITE/BIN/X/Y</p></body></html>", nullptr));
+#endif // QT_CONFIG(tooltip)
+        checkBox_4->setText(QCoreApplication::translate("MainWindow", "SITE/BIN/X/Y", nullptr));
+#if QT_CONFIG(tooltip)
+        checkBox_5->setToolTip(QCoreApplication::translate("MainWindow", "<html><head/><body><p>MAP\345\233\276\345\246\202\346\236\234\345\255\230\345\234\250\345\233\236\346\224\266\357\274\214\345\210\231\350\275\254\346\215\242\346\227\266\346\217\220\344\276\233\346\265\213\350\257\225MAP\345\222\214\345\233\236\346\224\266MAP\357\274\214\344\270\215\345\213\276\351\200\211\345\210\231\350\275\254\346\215\242\344\270\272\345\233\236\346\224\266\345\220\216\347\232\204\345\256\214\346\225\264MAP</p></body></html>", nullptr));
+#endif // QT_CONFIG(tooltip)
+        checkBox_5->setText(QCoreApplication::translate("MainWindow", "\345\233\236\346\224\266MAP\345\210\206\347\246\273", nullptr));
+#if QT_CONFIG(tooltip)
+        checkBox_6->setToolTip(QCoreApplication::translate("MainWindow", "<html><head/><body><p>MAP\345\233\276\345\246\202\346\236\234\345\255\230\345\234\250\345\233\236\346\224\266\357\274\214\345\210\231\350\275\254\346\215\242\346\227\266\346\217\220\344\276\233\346\265\213\350\257\225MAP\345\222\214\345\233\236\346\224\266MAP\357\274\214\344\270\215\345\213\276\351\200\211\345\210\231\350\275\254\346\215\242\344\270\272\345\233\236\346\224\266\345\220\216\347\232\204\345\256\214\346\225\264MAP</p></body></html>", nullptr));
+#endif // QT_CONFIG(tooltip)
+        checkBox_6->setText(QCoreApplication::translate("MainWindow", "\351\222\210\345\215\241\346\216\222\345\210\227\346\216\250\346\265\213", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "timelog\350\275\254\346\215\242", nullptr));
         menu->setTitle(QCoreApplication::translate("MainWindow", "\350\256\276\347\275\256", nullptr));
     } // retranslateUi
 

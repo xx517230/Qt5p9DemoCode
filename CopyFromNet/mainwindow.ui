@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>823</width>
-    <height>433</height>
+    <width>883</width>
+    <height>542</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,10 +15,10 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_11">
-    <item row="0" column="0">
+    <item row="0" column="1">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -419,6 +419,269 @@
         </item>
        </layout>
       </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>timelog转换</string>
+       </attribute>
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>591</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>选择目录或文件</string>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_12">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>320</y>
+          <width>831</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <widget class="QCheckBox" name="checkBox_11">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>40</y>
+           <width>111</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>选择文件或目录</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox_12">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>40</y>
+           <width>82</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>选择文件或目录</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QProgressBar" name="progressBar">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>430</y>
+          <width>511</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="value">
+         <number>24</number>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_14">
+        <property name="geometry">
+         <rect>
+          <x>610</x>
+          <y>10</y>
+          <width>231</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>设置</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_15">
+         <item row="0" column="0">
+          <widget class="QCheckBox" name="checkBox_2">
+           <property name="text">
+            <string>校验格式</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QCheckBox" name="checkBox">
+           <property name="text">
+            <string>时间统计</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QCheckBox" name="checkBox_4">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;是否保存SITE/BIN/X/Y&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>SITE/BIN/X/Y</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QCheckBox" name="checkBox_9">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;是否保存SITE/BIN/X/Y&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>SITE良率统计</string>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QCheckBox" name="checkBox_6">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MAP图如果存在回收，则转换时提供测试MAP和回收MAP，不勾选则转换为回收后的完整MAP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>针卡排列推测</string>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QCheckBox" name="checkBox_8">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MAP图如果存在回收，则转换时提供测试MAP和回收MAP，不勾选则转换为回收后的完整MAP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>换片时间推测</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0" colspan="2">
+          <widget class="QGroupBox" name="groupBox_16">
+           <property name="title">
+            <string/>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_13">
+            <item row="0" column="0">
+             <widget class="QCheckBox" name="checkBox_3">
+              <property name="text">
+               <string>间隔时间</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QSpinBox" name="spinBox">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;设置间隔时间，总时间会减去异常的间隔时间，如停止时间，默认30S&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="maximum">
+               <number>1024</number>
+              </property>
+              <property name="value">
+               <number>30</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="4" column="0" colspan="2">
+          <widget class="QGroupBox" name="groupBox_17">
+           <property name="title">
+            <string/>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_12">
+            <item row="0" column="1">
+             <widget class="QSpinBox" name="spinBox_2"/>
+            </item>
+            <item row="0" column="0">
+             <widget class="QCheckBox" name="checkBox_10">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MAP图如果存在回收，则转换时提供测试MAP和回收MAP，不勾选则转换为回收后的完整MAP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>PASS2BIN1</string>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="5" column="0" colspan="2">
+          <widget class="QGroupBox" name="groupBox_15">
+           <property name="title">
+            <string/>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_14">
+            <item row="1" column="0">
+             <widget class="QCheckBox" name="checkBox_5">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MAP图如果存在回收，则转换时提供测试MAP和回收MAP，不勾选则转换为回收后的完整MAP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>MAP分离</string>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QRadioButton" name="radioButton">
+              <property name="text">
+               <string>probe坐标</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QCheckBox" name="checkBox_7">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MAP图如果存在回收，则转换时提供测试MAP和回收MAP，不勾选则转换为回收后的完整MAP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>还原MAP</string>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QRadioButton" name="radioButton_2">
+              <property name="text">
+               <string>相对坐标</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
      </widget>
     </item>
    </layout>
@@ -428,7 +691,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>823</width>
+     <width>883</width>
      <height>20</height>
     </rect>
    </property>
