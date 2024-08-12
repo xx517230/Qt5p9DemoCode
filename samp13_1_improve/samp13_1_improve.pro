@@ -10,17 +10,20 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp \
-    timelog.cpp
+    dialog.cpp \
+    qdicethread.cpp
 
 HEADERS += \
-    mainwindow.h \
-    timelog.h
+    dialog.h \
+    qdicethread.h
 
 FORMS += \
-    mainwindow.ui
+    dialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    res.qrc
