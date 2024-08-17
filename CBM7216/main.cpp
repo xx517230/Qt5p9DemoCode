@@ -14,10 +14,10 @@ int main(int argc, char *argv[])
 }
 
 
-void checkTemplateFile()
+void checkTemplateFile(QString srcFile,QString destFile)
 {
-    QDir srcDir(srcDirStr);
-    QDir destDir(destDirStr);
+    QDir srcDir(srcFile);
+    QDir destDir(destFile);
     //获取该文件夹内所有文件除.和..以外
     srcDir.setFilter(QDir::NoDotAndDotDot | QDir::AllEntries);
     QStringList srcDirFileList = srcDir.entryList();

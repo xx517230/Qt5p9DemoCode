@@ -252,6 +252,7 @@ Makefile: ../../CBM7216.pro D:/developTools/Qt/5.15.2/mingw81_64/mkspecs/win32-g
 		D:/developTools/Qt/5.15.2/mingw81_64/mkspecs/features/qt_config.prf \
 		D:/developTools/Qt/5.15.2/mingw81_64/mkspecs/win32-g++/qmake.conf \
 		D:/developTools/Qt/5.15.2/mingw81_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		D:/developTools/Qt/5.15.2/mingw81_64/mkspecs/features/exclusive_builds.prf \
 		D:/developTools/Qt/5.15.2/mingw81_64/mkspecs/features/toolchain.prf \
 		D:/developTools/Qt/5.15.2/mingw81_64/mkspecs/features/default_pre.prf \
@@ -280,8 +281,8 @@ Makefile: ../../CBM7216.pro D:/developTools/Qt/5.15.2/mingw81_64/mkspecs/win32-g
 		D:/developTools/Qt/5.15.2/mingw81_64/lib/Qt5Gui.prl \
 		D:/developTools/Qt/5.15.2/mingw81_64/lib/Qt5Core.prl \
 		D:/developTools/Qt/5.15.2/mingw81_64/lib/qtmain.prl \
-		.qmake.stash \
-		D:/developTools/Qt/5.15.2/mingw81_64/mkspecs/features/build_pass.prf
+		D:/developTools/Qt/5.15.2/mingw81_64/mkspecs/features/build_pass.prf \
+		../../res.qrc
 	$(QMAKE) -o Makefile ..\..\CBM7216.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 D:/developTools/Qt/5.15.2/mingw81_64/mkspecs/features/spec_pre.prf:
 D:/developTools/Qt/5.15.2/mingw81_64/mkspecs/qdevice.pri:
@@ -465,6 +466,7 @@ D:/developTools/Qt/5.15.2/mingw81_64/mkspecs/features/qt_functions.prf:
 D:/developTools/Qt/5.15.2/mingw81_64/mkspecs/features/qt_config.prf:
 D:/developTools/Qt/5.15.2/mingw81_64/mkspecs/win32-g++/qmake.conf:
 D:/developTools/Qt/5.15.2/mingw81_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 D:/developTools/Qt/5.15.2/mingw81_64/mkspecs/features/exclusive_builds.prf:
 D:/developTools/Qt/5.15.2/mingw81_64/mkspecs/features/toolchain.prf:
 D:/developTools/Qt/5.15.2/mingw81_64/mkspecs/features/default_pre.prf:
@@ -493,8 +495,8 @@ D:/developTools/Qt/5.15.2/mingw81_64/lib/Qt5Widgets.prl:
 D:/developTools/Qt/5.15.2/mingw81_64/lib/Qt5Gui.prl:
 D:/developTools/Qt/5.15.2/mingw81_64/lib/Qt5Core.prl:
 D:/developTools/Qt/5.15.2/mingw81_64/lib/qtmain.prl:
-.qmake.stash:
 D:/developTools/Qt/5.15.2/mingw81_64/mkspecs/features/build_pass.prf:
+../../res.qrc:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\..\CBM7216.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 

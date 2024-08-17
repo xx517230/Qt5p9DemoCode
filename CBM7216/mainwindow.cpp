@@ -6,9 +6,13 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->tbtnSelectMap->setDefaultAction(ui->actSelectMap);
+
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+
